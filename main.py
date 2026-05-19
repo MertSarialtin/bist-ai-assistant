@@ -10,7 +10,7 @@ import os
 load_dotenv()
 def telegram_mesaj_gonder(mesaj):
     token = os.getenv("TELEGRAM_TOKEN")
-    chat_id = "7401971607"
+    chat_id = "5649465182"
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     requests.post(url, json={"chat_id": chat_id, "text": mesaj})
 

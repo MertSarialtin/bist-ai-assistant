@@ -135,8 +135,8 @@ scheduler = BackgroundScheduler(
 scheduler.add_job(
     tahmin_yap,
     trigger="cron",
-    hour=18,
-    minute=44
+    hour=9,
+    minute=30
 )
 
 scheduler.start()

@@ -4,6 +4,7 @@ import pandas as pd
 import yfinance as yf
 import requests
 import os
+from pytz import timezone
 
 from fastapi import FastAPI
 from dotenv import load_dotenv
@@ -126,14 +127,16 @@ def manuel_tahmin():
 # SCHEDULER
 # ==========================================
 
-scheduler = BackgroundScheduler()
+scheduler = BackgroundScheduler(
+    timezone=timezone("Europe/Istanbul")
+)
 
 # Her gün saat 18:00
 scheduler.add_job(
     tahmin_yap,
     trigger="cron",
     hour=18,
-    minute=35
+    minute=44
 )
 
 scheduler.start()

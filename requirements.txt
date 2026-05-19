@@ -7,3 +7,4 @@ joblib
 scikit-learn
 requests
 python-dotenv
+apscheduler

@@ -133,7 +133,7 @@ scheduler.add_job(
     tahmin_yap,
     trigger="cron",
     hour=18,
-    minute=30
+    minute=35
 )
 
 scheduler.start()

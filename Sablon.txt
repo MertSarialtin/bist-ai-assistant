@@ -1,0 +1,29 @@
+# ===================================================================|
+# 1. ADIM: VERİ ÇEKME VE ÖZELLİK MÜHENDİSLİĞİ                        |
+# ===================================================================|
+1-) çekmek istediğin hisseleri listeye ekle                          |
+                                                                     |
+2-) for döngüsü ile listedeki sıradaki hissenin verilerini           |
+DataFrame olarak çek                                                 |
+                                                                     |
+3-) bazen sütunlar üst üste binmiş şekilde gelebiliyor               |
+bu yüzden buna karşı önlem alacak kodu yaz                           |
+                                                                     |
+4-) ileride date sütunu ile işlem yapabilmek için                    |
+date sütununu index halden çıkarıp sütuna çevir                      |
+                                                                     |
+5-) bütün sütun isimlerini küçük harfe dönüştür                      |
+                                                                     |
+6-) çektiğimiz verileri geçici df değişkenine kopyalıyoruz           |
+                                                                     |
+7-) "ma50", "ma200", "rsi" ve "target" sütunlarını ekliyoruz         |
+                                                                     |
+8-) df değişkenindeki verileri veritabanına yazıyoruz                |
+                                                                     |
+9-) for döngüsü burada bitiyor listedeki bütün hisseler              |
+bitene kadar for döngüsü devam eder (liste bitmediyse 2. adıma dön)  |
+                                                                     |
+=====================================================================|
+# ==========================================
+# 2. ADIM: MODELİ EĞİTME VE KAYDETME
+# ==========================================

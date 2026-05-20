@@ -12,7 +12,7 @@ Proje temel olarak iki ana aşamadan oluşmaktadır:
 
 ## 🛠️ Kullanılan Teknolojiler ve Kütüphaneler
 
-* **Programlama Dili:** Python 3.x
+* **Programlama Dili:** Python 
 * **API & Sunucu:** FastAPI, Uvicorn
 * **Veri Bilimi & Makine Öğrenmesi:** Pandas, NumPy, Scikit-Learn (Random Forest), Joblib
 * **Finansal Veri:** yfinance (Yahoo Finance API)

@@ -133,11 +133,16 @@ scheduler = BackgroundScheduler(
 
 scheduler.add_job(
     tahmin_yap,
-    trigger="cron",
-    hour=15,
-    minute=56
+    trigger="interval",
+    seconds=30
 )
 
 scheduler.start()
 
 print("Scheduler başlatıldı...")
+
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+

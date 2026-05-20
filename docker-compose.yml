@@ -1,0 +1,12 @@
+services:
+  bist-ai-assistant:
+    build: .
+    container_name: bist-ai-assistant
+
+    ports:
+      - "8000:8000"
+
+    restart: always
+
+    env_file:
+      - .env

@@ -25,11 +25,29 @@ Proje temel olarak iki ana aşamadan oluşmaktadır:
 ## 📂 Proje Yapısı
 
 ```text
-├── .vscode/
-├── borsa_verileri.db      # Özellik mühendisliği yapılmış verilerin tutulduğu SQLite veritabanı
-├── data_and_model.py      # Veri çekme, işleme ve model eğitme scripti
-├── main.py                # FastAPI, Zamanlayıcı (Scheduler) ve Telegram entegrasyonu
-├── model.pkl              # Eğitilmiş ve kaydedilmiş Random Forest modeli
-├── Procfile               # (Opsiyonel) Canlıya alım (Deployment) yapılandırma dosyası
-├── requirements.txt       # Gerekli bağımlılıkların listesi
-└── README.md              # Proje dökümantasyonu
+├── main.py                # API + Scheduler + Telegram bot
+├── data_and_model.py     # Model eğitimi ve veri hazırlama
+├── model.pkl             # Eğitilmiş ML modeli
+├── borsa_verileri.db     # SQLite veri tabanı
+├── requirements.txt      # Python bağımlılıkları
+├── Dockerfile            # Docker imajı
+├── docker-compose.yml    # Container yönetimi
+├── .env.example          # Ortam değişkenleri şablonu
+└── README.md
+```
+
+##⚙️ Kurulum
+
+1. Repo'yu klonla
+git clone https://github.com/kullaniciadi/bist-ai-assistant.git
+cd bist-ai-assistant
+
+2. .env dosyası oluştur
+Proje kök dizinine .env dosyası ekle:
+TELEGRAM_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
+CHAT_ID=YOUR_TELEGRAM_CHAT_ID
+
+4. Telegram Bot Bilgileri
+Bot oluşturmak için: @BotFather
+Chat ID öğrenmek için: @userinfobot
+---

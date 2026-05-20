@@ -69,14 +69,14 @@ def tahmin_yap():
 
         son_satir = veri.iloc[-1]
 
-        gercek_girdi = np.array([[
-            son_satir["open"],
-            son_satir["close"],
-            son_satir["volume"],
-            son_satir["ma50"],
-            son_satir["ma200"],
-            son_satir["rsi14"]
-        ]])
+        gercek_girdi = pd.DataFrame([{
+            "open": son_satir["open"],
+            "close": son_satir["close"],
+        "volume": son_satir["volume"],
+        "ma50": son_satir["ma50"],
+        "ma200": son_satir["ma200"],
+        "rsi14": son_satir["rsi14"]
+}])
 
         # Model yükle
         model = joblib.load("model.pkl")
@@ -133,13 +133,13 @@ scheduler = BackgroundScheduler(
 
 scheduler.add_job(
     tahmin_yap,
-    trigger="interval",
-    seconds=30
+    trigger="cron",
+    hour=9,
+    minute=30
 )
-
-scheduler.start()
-
-print("Scheduler başlatıldı...")
+@app.on_event("startup")
+def start_scheduler():
+    scheduler.start()
 
 import uvicorn
 

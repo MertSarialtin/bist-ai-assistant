@@ -131,12 +131,11 @@ scheduler = BackgroundScheduler(
     timezone=timezone("Europe/Istanbul")
 )
 
-# Her gün saat 18:00
 scheduler.add_job(
     tahmin_yap,
     trigger="cron",
-    hour=9,
-    minute=30
+    hour=15,
+    minute=56
 )
 
 scheduler.start()
